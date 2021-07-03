@@ -18,7 +18,7 @@ Group 1 – Life Expectancy Indicators
 3.	Bahloul, Bayan
 4.	Lerner, Ryan
 5.	lachhab, Mouad
-6.	
+
 Group 2 – Waste Management (trash collection)
 1.	Mangala, Francis
 2.	Weber, Yuval
@@ -26,7 +26,7 @@ Group 2 – Waste Management (trash collection)
 4.	Wilson, Ashley
 5.	Roberts, Truman
 6.	Bradshaw, Ryan
-7.	
+
 Group 3 – Led contaminated water
 1.	El-Rashed, Ferris
 2.	Erdenebat, Khorolsuren
@@ -34,7 +34,7 @@ Group 3 – Led contaminated water
 4.	Manning, Sarah
 5.	Meneus, Jeffte
 6.	Holmes, Monica
-7.	
+
 Group 4 _ Coronavirus Pandemic Playbook
 1.	Leggett, Michael
 2.	Essilfie-Bondzie, DINAH
@@ -42,7 +42,7 @@ Group 4 _ Coronavirus Pandemic Playbook
 4.	Ellerbe, Kimberly
 5.	Gross, Jack
 6.	Watson, David
-7.	
+
 Group 5 – Bike Sharing
 1.	Shane, Thomas
 2.	Escamilla, Paola
