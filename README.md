@@ -180,6 +180,52 @@ You can download the full rubric and save it to your desktop. Review it regularl
 Rubric for the entire Final Project (Links to an external site.)
 Now that you have an idea of what that final deliverable at the end of the fourth segment will look like, let's talk a little bit about how your team will work together to get it done.
 
+# 1st Segment Ruberic
+The final rubric covers points you'll be working on each week. The project overview covered these too, and you can find them in the assignment details for the fourth segment deliverable as well.
+
+If you look closely, you'll notice that the deliverable requirements for this first segment fall into the same categories in the final rubric: Presentation, GitHub Repository, Machine Learning Model, Database Integration, and Dashboard.
+
+Of course, the level of sophistication required for the First Segment deliverable will be much lower than that for the Fourth Segment deliverable. Also, you'll notice that some segments have more points in one category, and fewer in another, than the next segment. That's because the project builds over time, and while the intensive work may shift from one week to the next, it's critical to keep the big picture in mind.
+
+Take a moment to read through the mastery requirements for the first segment.
+
+Presentation (30 points)
+Content
+The team members have drafted their project, including the following:
+
+Selected topic
+Reason they selected the topic
+Description of the source of data
+Questions they hope to answer with the data
+IMPORTANT
+The content does not yet need to be in the form of a presentation. It can be text in the README.md.
+
+GitHub Repository (10 points)
+Main Branch
+The main branch should include:
+
+README.md
+README.md
+The README.md should include:
+
+Description of the communication protocols
+Individual Branches
+Requirements for the individual branches follow:
+
+At least one branch for each team member
+Each team member has at least four commits for the duration of the first segment
+Machine Learning Model (35 points)
+Team members will be expected to present a provisional machine learning model that stands in for the final machine learning model and accomplishes the following:
+
+Takes in data from the provisional database
+Outputs label for input data
+Database Integration (25 points)
+Team members will be expected to present a provisional database that stands in for the final database and accomplishes the following:
+
+Sample data that mimics the expected final database structure or schema
+Draft machine learning model is connected to the provisional database
+Dashboard (0 points)
+There are no deliverables associated with the dashboard for this segment.
 
 
 # Work Definition
