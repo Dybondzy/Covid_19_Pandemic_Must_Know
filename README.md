@@ -194,6 +194,35 @@ Include mockups of a machine learning model and a database.
 Plan Your Schedule
 Project weeks can be intense. Make sure to pad your tasks with extra time. There's an excellent chance you'll find yourself researching issues you've not encountered before, or that you'll want your code to do something more advanced than what has been covered in class. That's all OK!
 
+# Deliverable 1 Foundation
+Before jumping into your project work, you'll need to create a solid foundation to build upon. This means familiarizing yourself with your role and responsibilities for the week. Additionally, you'll need to establish communication strategies and prepare a repository. You'll create a mockup of a machine learning model for the virtual class, as well as a mockup of a database with sample data, or even fabricated data. This way, you'll have a firmer grasp of how you want these different pieces to interact.
+
+By this week's virtual class, your team will need to come up with a question that can be answered with data, and you'll need to source the data you intend to use. During this segment's live session, your team will meet with your instructor to talk about your project topic—listen to the feedback before moving on to the next segment. By the end of the meeting, you'll know what you'll be working on for the remainder of the course.
+
+Completing an exploratory data analysis will help you determine if your topic is viable or if further consideration (or even a different topic) is needed. It'll also help you prepare for that conversation with your instructor. It's a good idea to think about what metrics you'll be including in the machine learning portion.
+
+Before meeting with your instructor, your team will need to complete the following:
+
+Decide on a topic, source data, and perform exploratory data analysis.
+Create a repository and establish individual branches for each team member.
+Create a mockup of a machine learning model.
+Create a mockup of a database.
+Decide which technologies will be used.
+Work as a Team
+Once a topic has been agreed upon, each member will be assigned a role, indicated by a particular shape: square, triangle, circle, and X. Each shape, or role, will have an assigned task.
+
+The X role is mandatory for teams of four and optional for teams of three. Later, we'll cover how the designations will work. For now, review the following deliverable requirements for the first segment:
+
+Square: The team member in the square role will be responsible for the repository.
+
+Triangle: The member in the triangle role will create a mockup of a machine learning model. This can even be a diagram that explains how it will work concurrently with the rest of the project steps.
+
+Circle: The member in the circle role will create a mockup of a database with a set of sample data, or even fabricated data. This will ensure the database will work seamlessly with the rest of the project.
+
+X: The member in the X role will decide which technologies will be used for each step of the project.
+
+
+
 # Coronavirus Pandemic Playbook
 
 ## Project Topic and Description
