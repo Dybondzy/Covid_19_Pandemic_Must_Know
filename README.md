@@ -183,6 +183,16 @@ Now that you have an idea of what that final deliverable at the end of the fourt
 
 
 # Work Definition
+## What You Will Accomplish
+By the end of this module, you will have created the foundation for your final project. By defining roles between your team members and establishing a communication structure beforehand, you'll already be off to a great start. Additionally, you'll complete the following tasks:
+
+Decide on a topic for the project—think of a question that can be answered using data.
+Create a repository for the project and invite the other team members to join.
+Source a dataset that will suit your needs (you can even use multiple datasets if applicable).
+Begin to clean, organize, and perform exploratory data analysis on your datasets so that they're ready for analysis.
+Include mockups of a machine learning model and a database.
+Plan Your Schedule
+Project weeks can be intense. Make sure to pad your tasks with extra time. There's an excellent chance you'll find yourself researching issues you've not encountered before, or that you'll want your code to do something more advanced than what has been covered in class. That's all OK!
 
 # Coronavirus Pandemic Playbook
 
