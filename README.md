@@ -55,10 +55,17 @@ Group 5 – Bike Sharing
 # PROJECT PURPOSE 
 ## Each segment's tasks follow:
 
-First Segment: Sketch It Out: Decide on your overall project, select your question, and build a simple model. You'll connect the model to a fabricated database, using comma-separated values (CSV) or JavaScript Object Notation (JSON) files, to prototype your idea.
-Second Segment: Build the Pieces: Train your model and build out the database you'll use for your final presentation.
-Third Segment: Plug It In: Connect your final database to your model, continue to train your model, and create your dashboard and presentation.
-Fourth Segment: Put It All Together: Put the final touches on your model, database, and dashboard. Lastly, create and deliver your final presentation to your class.
+### First Segment: 
+Sketch It Out: Decide on your overall project, select your question, and build a simple model. You'll connect the model to a fabricated database, using comma-separated values (CSV) or JavaScript Object Notation (JSON) files, to prototype your idea.
+
+### Second Segment: 
+Build the Pieces: Train your model and build out the database you'll use for your final presentation.
+
+### Third Segment: 
+Plug It In: Connect your final database to your model, continue to train your model, and create your dashboard and presentation.
+
+### Fourth Segment: 
+Put It All Together: Put the final touches on your model, database, and dashboard. Lastly, create and deliver your final presentation to your class.
 
 Many aspects you've encountered during this course are integrated into this final project. For instance, Python will be used to clean, prepare, and explore the data, as well as to complete initial analysis. Python libraries, JavaScript libraries (such as Data-Driven Documents, or D3, and Plotly), and Tableau can be used to create visuals to help tell your data story.
 
@@ -68,26 +75,22 @@ To close, you'll write a short personal reflection after submitting your final p
 
 Each segment and the closing self-assessment will be graded. The grading breakdown follows:
 
-Graded Unit	Group or Individual?	Points Available	Percentage of Final Score
+### Graded Unit	
+Group or Individual?	Points Available	Percentage of Final Score
 Segment 1: Sketch It Out	Group	100	19%
 Segment 2: Build the Pieces	Group	100	19%
 Segment 3: Plug It In	Group	100	19%
 Segment 4: Put It All Together	Group	100	40%
 Individual Self-Assessment	Individual	10	3%
 
-Before jumping into the first segment of your project, take a moment to review the grading criteria for the final deliverable at the end of this four-segment project. It's helpful to start here so that you understand the end goal.
-
-Below are descriptions of what "mastery" looks like for each criterion. Go ahead and read through each, and note any questions you have to discuss with your team and instructor.
-
-Presentation (25 points)
+### Presentation 
+(25 points)
 The presentation itself is worth 25 points, or a full quarter of your grade for the final segment. This is your chance to share a polished, interview or boardroom ready deliverable.
 
-Remember, you won't necessarily be graded on whether or not you've built the very best model. Instead, you'll be graded on your process: How did you select the model, and why? What roadblocks did you encounter (there are always roadblocks!), and how did you solve them?
-
-Content
+### Content
 The presentation should tell a cohesive story about the project and include the following:
 
-Selected topic
+### Selected topic
 Reason the topic was selected
 Description of the source of data
 Questions the team hopes to answer with the data
@@ -97,7 +100,8 @@ Technologies, languages, tools, and algorithms used throughout the project
 Result of analysis
 Recommendation for future analysis
 Anything the team would have done differently
-Slides
+
+### Slides
 The presentation should be finalized in Google Slides and include the following:
 
 Slides are primarily images or graphics (rather than primarily text).
@@ -109,12 +113,12 @@ All team members present in equal proportions.
 The team demonstrates the dashboard's real-time interactivity.
 The presentation falls within any time limits provided by the instructor.
 The submission includes speaker notes, flashcards, or a video of the presentation rehearsal.
-GitHub Repository (10 points)
+
+### GitHub Repository 
+(10 points)
 Your final segment deliverable also will include a link to your GitHub repository. Of course, since you'll be contributing to this repository over time, you'll also see repository requirements in the rubrics for the other three segments.
 
-Remember, when you graduate from this program, you retain your repository access. Often, interviewers will ask for access too, so make sure you're putting in the effort to make your repository stand out.
-
-Main Branch
+### Main Branch
 All code in the main branch should be production-ready. All code should be clean, commented, easy to read, and adhere to a coding standard, such as PEP8.
 
 The main branch should include:
@@ -124,7 +128,8 @@ All code necessary to complete the machine learning portion of the project
 Any images that have been created (at least three)
 Requirements.txt file
 README.md
-README.md should include:
+
+### README.md should include:
 
 Cohesive, structured outline of the project (this may include images, but they should be easy to follow and digest)
 Link to dashboard (or link to video of dashboard demonstration)
@@ -132,7 +137,7 @@ Link to Google Slides presentation
 IMPORTANT
 The descriptions and explanations required in all other project deliverables should also be in your README.md as part of your outline, unless otherwise noted.
 
-Individual Branches
+### Individual Branches
 Requirements for the individual branches follow:
 
 At least one branch for each team member
@@ -151,7 +156,8 @@ Additionally, the model obviously addresses the question or problem the team is 
 
 If statistical analysis is not included as part of the current analysis, the team should add a description of how it would be included in the next phases of the project.
 
-Database Integration (25 points)
+### Database Integration 
+(25 points)
 Just as you did for the machine learning model, you'll create a mockup or "dummy" database during the first segment of your project to make sure the model works. This mockup will follow the format of the expected database, but it will be simpler and likely in a CSV or JSON format.
 
 For your final segment, you'll present a project with a fully integrated database, with the following features:
@@ -164,7 +170,8 @@ Includes at least one connection string (using SQLAlchemy or PyMongo)
 IMPORTANT
 If you use a SQL database, you must provide your Entity Relationship Diagram (ERD) with relationships.
 
-Dashboard (15 points)
+### Dashboard 
+(15 points)
 You'll demonstrate your dashboard during the presentation, but it is important enough to count as its own aspect of the deliverable. When building your dashboard, keep the following requirements in mind:
 
 The dashboard presents a data story that is logical and easy to follow for someone unfamiliar with the topic. It should include all of the following:
@@ -174,7 +181,7 @@ Data (images or report) from the machine learning task
 At least one interactive element
 Either the dashboard is published or the submission includes a screen capture video of it in action.
 
-View the Full Rubric
+### View the Full Rubric
 You can download the full rubric and save it to your desktop. Review it regularly to make sure you're on track.
 
 Rubric for the entire Final Project (Links to an external site.)
@@ -189,7 +196,8 @@ Of course, the level of sophistication required for the First Segment deliverabl
 
 Take a moment to read through the mastery requirements for the first segment.
 
-Presentation (30 points)
+#### Presentation 
+(30 points)
 Content
 The team members have drafted their project, including the following:
 
@@ -200,12 +208,14 @@ Questions they hope to answer with the data
 IMPORTANT
 The content does not yet need to be in the form of a presentation. It can be text in the README.md.
 
-GitHub Repository (10 points)
+#### GitHub Repository 
+(10 points)
 Main Branch
 The main branch should include:
 
 README.md
-README.md
+
+#### README.md
 The README.md should include:
 
 Description of the communication protocols
@@ -257,18 +267,22 @@ Decide which technologies will be used.
 Work as a Team
 Once a topic has been agreed upon, each member will be assigned a role, indicated by a particular shape: square, triangle, circle, and X. Each shape, or role, will have an assigned task.
 
+### X role
 The X role is mandatory for teams of four and optional for teams of three. Later, we'll cover how the designations will work. For now, review the following deliverable requirements for the first segment:
-
-Square: The team member in the square role will be responsible for the repository.
-
-Triangle: The member in the triangle role will create a mockup of a machine learning model. This can even be a diagram that explains how it will work concurrently with the rest of the project steps.
-
-Circle: The member in the circle role will create a mockup of a database with a set of sample data, or even fabricated data. This will ensure the database will work seamlessly with the rest of the project.
 
 X: The member in the X role will decide which technologies will be used for each step of the project.
 
+### Square
+Square: The team member in the square role will be responsible for the repository.
+
+### Triangle
+Triangle: The member in the triangle role will create a mockup of a machine learning model. This can even be a diagram that explains how it will work concurrently with the rest of the project steps.
+
+### Circle
+Circle: The member in the circle role will create a mockup of a database with a set of sample data, or even fabricated data. This will ensure the database will work seamlessly with the rest of the project.
 
 
+# First Segment: 
 # Coronavirus Pandemic Playbook
 ## Project Topic and Description
 
