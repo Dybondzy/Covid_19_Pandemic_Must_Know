@@ -283,6 +283,14 @@ Triangle: The member in the triangle role will create a mockup of a machine lear
 ### Circle
 Circle: The member in the circle role will create a mockup of a database with a set of sample data, or even fabricated data. This will ensure the database will work seamlessly with the rest of the project.
 
+The team member in the square role will be responsible for setting up the repository. This includes naming the repository and adding team members.
+
+Once team members are all on board, it will be your responsibility to ensure everyone has his or her own branch to work from. You can create branches for them or they can create their own. Either way, it's important to separate your work and to keep the main branch free from code in progress. It's also a good idea to create a new branch for each topic. For example, code to clean a dataset on tomatoes could be called cleaning_tomatoes. If the same person started analysis on the data, he or she would then create a new branch called analyzing_tomatoes.
+
+A good rule of thumb is to keep only tested, working code (or final reports, READMEs, and other documentation) in the main branch so that there is always something functional to present.
+
+While working on your project, the privacy of the repository should be set to "public." This way, your class, instructor, and teaching assistants can view it without being added as collaborators.
+
 
 # First Segment: 
 # Coronavirus Pandemic Playbook
