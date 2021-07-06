@@ -263,6 +263,8 @@ Decide on a topic, source data, and perform exploratory data analysis.
 Create a repository and establish individual branches for each team member.
 Create a mockup of a machine learning model.
 Create a mockup of a database.
+! https://covidtracking.com/data/download
+
 Decide which technologies will be used.
 Work as a Team
 Once a topic has been agreed upon, each member will be assigned a role, indicated by a particular shape: square, triangle, circle, and X. Each shape, or role, will have an assigned task.
