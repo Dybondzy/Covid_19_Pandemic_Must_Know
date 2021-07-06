@@ -283,6 +283,15 @@ Triangle: The member in the triangle role will create a mockup of a machine lear
 ### Circle
 Circle: The member in the circle role will create a mockup of a database with a set of sample data, or even fabricated data. This will ensure the database will work seamlessly with the rest of the project.
 
+1. The team member in the circle role is in charge of the mockup database. 
+2.This means you're using a SQL-based database, including an ERD of the database and a document pointing out how it is integrated into your database and how it works with the code. 
+3. You'll need to use either sample data or even fabricated data to test it. 
+4. When you submit this database for your weekly grade, make sure you're submitting the data used for testing as well. 
+5. Make sure to upload it to the repository along with the rest of the database-related work.
+6. By the date of your virtual class, you're required to submit the mockup database to your instructional staff. 
+7. This is a great opportunity to test out your new GitHub branch. It's just as easy to share a link to a branch as it is to share a link to a repository.
+8. Once you're set up in your repository and using your branch, create a document describing the schema of the database (this can be a markdown document, or an ERD). 
+9. Push the document up to the repository, then open a webpage to GitHub.
 
 
 # First Segment: 
@@ -332,7 +341,19 @@ The Brookings Institute identified state capacity as one of three pre-existing c
 8. Did political affiliation of areas have an influence on the number of Covid cases prior to vaccine distribution?
  
 ### Machine Learning
-We have identified a multiple linear regression model as the best model in order to complete our project. The inputs for the model will be covid cases by state, gender, age, weight, race, political party, religious affiliation, income level, and population density. We are using a multiple linear regression model because we have multiple explanatory variables (the independent variables which are the earlier identified factors) and we want to know how strong the relationship is between these independent variables with our dependent variable, which is covid cases. We are using a linear model as opposed to a logisitical model because our dependent variable is continuous. We will run the model with the hopes of identifying the largest factors that played a role in the spread of covid-19. We will be considering the R squared value and the standardized coefficient when running our model in order to consider if the model is well fitted and compare the factors to see which play a larger role. The sample equation that we are using to build the model is below:
+The machine learning model should answer:
+Which model did you choose and why?
+How are you training your model?
+What is the model's accuracy?
+How does this model work?
+
+The inputs for the model will be covid cases by state, gender, age, weight, race, political party, religious affiliation, income level, and population density. 
+We are using a multiple linear regression model because we have multiple explanatory variables 
+(the independent variables which are the earlier identified factors) and we want to know how strong the relationship is between these independent variables with our dependent variable, which is covid cases. 
+We are using a linear model as opposed to a logisitical model because our dependent variable is continuous. 
+We will run the model with the hopes of identifying the largest factors that played a role in the spread of covid-19. 
+We will be considering the R squared value and the standardized coefficient when running our model in order to consider if the model is well fitted and compare the factors to see which play a larger role. 
+The sample equation that we are using to build the model is below:
 
 yi=β0+β1xi,1+β2xi,2+…+βkxi,k+ϵi.
 
@@ -351,6 +372,10 @@ xi4 = political party affiliation
 xi5 = income level
 
 xi6 = health care professionals/doctors registered by state
+
+
+What is the model's accuracy?
+
 
 ### Communication Protocol 
 
