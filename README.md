@@ -541,3 +541,10 @@ Be sure to carefully review any feedback your instructor may give you on your wo
 Rubric
 Now that you’re ready to submit, make sure that you have all the deliverables in place by reviewing the rubric one final time.
 
+
+Square ---
+Triangle --- Dinah
+Circle ---
+X ---
+
+
