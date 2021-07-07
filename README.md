@@ -295,7 +295,6 @@ Circle: The member in the circle role will create a mockup of a database with a 
 
 
 
-
 # First Segment: 
 # Coronavirus Pandemic Playbook
 ## Project Topic and Description
@@ -402,9 +401,7 @@ We will create an HTML/CSS portfolio to showcase our project and Bootstrap compo
 During this segment, the team will continue to work on their analysis of the data. Make sure to really explore what the data has to offer and continue to refine how machine learning will help solve the question or provide an enhancement to the project. This means moving from a preliminary model into your machine learning model. The mockup database created last week will need to be integrated and refined as well, and the visuals that help tell the data story will need to be created.
 
 
-
-
-# 2nd Segment Ruberic
+## 2nd Segment Ruberic
 The final rubric covers points you'll be working on each week. The project overview covered these too, and you can find them in the assignment details for the fourth segment 
 
 Let's take a look at how these assignments are distributed across the roles:
@@ -434,8 +431,10 @@ Description of the source of data
 Questions the team hopes to answer with the data
 Description of the data exploration phase of the project
 Description of the analysis phase of the project
-Slides
+
+Slides/Github
 Presentations are drafted in Google Slides.
+Updated README file
 
 GitHub Repository (10 points)
 Main Branch
@@ -479,6 +478,55 @@ A blueprint for the dashboard is created and includes all of the following:
 Storyboard on a Google Slide(s)
 Description of the tool(s) that will be used to create the final dashboard
 Description of interactive element(s)
+
+### Square
+During the second segment, the square will focus on the machine learning model. Building off of the preliminary model built in the first segment, continue to refine, train, and test the model. Make sure to document how it ties into the project. There needs to be a description of the model as well as any preprocessing that was involved. Additionally, capture an interpretation of how accurate, precise, or sensitive the model is.
+
+One question: If you had more time, where would you like to investigate for finer tuning? Keep this in mind as the presentation is being put together since it could be a really strong talking point.
+
+For this segment, continue using the same branch that was created during the last segment. If that branch has already been merged in, that's OK. You can just create a new one to work from instead.
+
+There are several questions to keep in mind as you work through this segment:
+
+How does it work?
+Why this specific model?
+What is the model's accuracy?
+If there are statistics involved, what stats are being included in analysis and why?
+If no statistics are involved, what would you include if you had more time?
+There's a chance you'll run into stumbling blocks here or there, too. Remind yourself that it's OK and not to get stuck—instead of spending vast amounts of time stuck on a single problem, document it, then (during the presentation) discuss how you would approach it differently if you had more time.
+
+At the end of this segment, you will need to have a description of the model and a discussion about any preprocessing involved. Additionally, an interpretation of how accurate, precise, and sensitive the model is should be included for the submission.
+
+
+### Triangle
+
+The team member in the triangle role is involved in upscaling the project's database. Last segment, a mockup database was created using either sample or fabricated data. Now we need to level it up to use the full static dataset that was sourced earlier. It's a good idea to create a new branch to work from for this task, to help track different versions the project will progress through.
+
+Now let's take a closer look at the different database deliverables for this segment.
+
+First, make sure the database is integrated fully and that it interfaces with the project in some form. For example, does web scraping add or update data? The same thought can be applied to the application programming interface (API) calls as well.
+
+Next, there should be at least two tables (or collections if Mongo is being used) in the database. If you're collecting data on plants and their common locations, for example, you would have a table for the plant's information (genus, species, brief description) and a second table for geographic locations.
+
+Additionally, there should be at least one join completed within the database. Using the same example from earlier, the two tables could be joined to show all of the plants' information and the locations.
+
+Finally, there will need to be at least one connection string included. For example, if you're using PyMongo, you'll need to include a connection string in Python that demonstrates the link between your code and the database.
+
+### Circle
+The team member in the circle role will continue to refine the analysis. This includes generating at least three images to use in the presentation and with the dashboard. Imagine that the presentation, and the dashboard, are being shown to a potential employer. Not only do the images need to be neat and clean, but they also need to clearly add weight to the data story being told.
+
+A good way to increase the quality of your images is to incorporate a visualization library, such as Seaborn if you're using Python, to make high-quality PNGs that can be reused as needed.
+
+Create a new GitHub branch to work from during this segment. This is a great way to get feedback from your team on the visuals you create—they will be able to see them and provide feedback (and encouragement!) as you create them and experiment with different color themes.
+
+It's important to keep in mind that the dashboard will require interactivity; so if you're creating maps using GeoJSON, this is a great time to make sure some fancy things are included, such as layers and filters.
+
+### X
+The team member in the X role will focus on the team's dashboard. Create a storyboard of a dashboard that will be used to display your data findings. Imagine that you and your team will be presenting this dashboard to a potential employer.
+
+A potential employer may not be familiar with the dataset you've been working with. Or they may not have seen the specific technology you've used to create the dashboard first-hand. Even if they have, you want to create a dashboard that is easy to understand for everyone.
+
+It will also need to include interaction—something more sophisticated than a tooltip. A map with multiple layers, for example, is a powerful tool. Or an interactive chart that can be filtered or has adjustable zoom can lend great strength to analysis. This is something to keep in mind and collaborate on with whomever is in the circle role during this segment.
 
 
 
