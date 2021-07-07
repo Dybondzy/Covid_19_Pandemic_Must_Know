@@ -529,4 +529,15 @@ A potential employer may not be familiar with the dataset you've been working wi
 It will also need to include interaction—something more sophisticated than a tooltip. A map with multiple layers, for example, is a powerful tool. Or an interactive chart that can be filtered or has adjustable zoom can lend great strength to analysis. This is something to keep in mind and collaborate on with whomever is in the circle role during this segment.
 
 
+Module 20 Second Segment Project Deliverable
+
+Two segments down, and two to go! Congrats on making it to the halfway point in this final project.
+
+IMPORTANT
+Remember that every member of the team, regardless of his or her role, will need to submit all of the deliverables for each segment.
+
+Be sure to carefully review any feedback your instructor may give you on your work, as that feedback will help you improve and correct course, if need be.
+
+Rubric
+Now that you’re ready to submit, make sure that you have all the deliverables in place by reviewing the rubric one final time.
 
