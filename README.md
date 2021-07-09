@@ -330,6 +330,7 @@ The Brookings Institute identified state capacity as one of three pre-existing c
 [A database that we can consider] (https://covidtracking.com/data/download)
 
 (https://data.cdc.gov/Case-Surveillance/COVID-19-Case-Surveillance-Public-Use-Data-Profile/xigx-wn5e)
+https://data.cdc.gov/Case-Surveillance/COVID-19-Case-Surveillance-Public-Use-Data-with-Ge/n8mc-b4w4
 
 
 ### Questions to Investigate During Project
