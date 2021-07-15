@@ -423,7 +423,7 @@ Continue with analysis and create visuals to accompany the data story.
 ### X: 
 Outline and begin work on a dashboard to house your final project. Check and test the work completed against the rubric.
 
-## Second Segment Rubric
+### Second Segment Rubric
 
 Presentation (15 points)
 Content
