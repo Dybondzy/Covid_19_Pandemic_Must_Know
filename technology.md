@@ -285,6 +285,74 @@ underlying_conditions_yn         2
 # Step 9
 df_COVID_cdc_db.to_csv("COVID_CDC_DATA.csv")
 
+
+# Extract from file 5
+# Step 1
+df_app_MD = pd.read_csv("maryland_data.csv")
+df_app_MD.head()
+
+# Determine the number of unique values in each column
+# Step 2
+df_app_MD.nunique()
+case_month                      10
+res_state                        1
+state_fips_code                 15
+res_county                      22
+county_fips_code                25
+age_group                        4
+sex                              4
+race                             7
+ethnicity                        4
+exposure_yn                      3
+current_status                   2
+symptom_status                   3
+hosp_yn                          4
+icu_yn                           3
+death_yn                         4
+underlying_conditions_yn         1
+
+# Step 3
+df_app_MD.shape
+(225814, 17)
+
+# Step 4
+cdc_by_agegroup_sex_race_df=df_app_MD.drop(columns=["state_fips_code","res_county","county_fips_code"], axis=1)
+
+# Step 5
+cdc_by_agegroup_sex_race_df.isnull().sum()
+
+# Determine the number of unique values in each column
+# Step 6
+cdc_by_agegroup_sex_race_df.nunique()
+
+# Step 7
+new_cdc_by_agegroup_sex_race_df=cdc_by_agegroup_sex_race_df.rename(columns={'Data As Of': 'AsOfDate','Start Date':'StartDate','End Date':'EndDate', 'Group': 'Grouping','Age Group': 'AgeGroup','Condition Group':'ConditionGroup','COVID-19 Deaths' : 'Deaths'}, inplace=False)
+new_cdc_by_agegroup_sex_race_df.head
+[225814 rows x 14 columns]>
+
+# Step 8
+new_cdc_by_agegroup_sex_race_df.nunique()
+Unnamed: 0                  225814
+case_month                      10
+res_state                        1
+age_group                        4
+sex                              4
+race                             7
+ethnicity                        4
+exposure_yn                      3
+current_status                   2
+symptom_status                   3
+hosp_yn                          4
+icu_yn                           3
+death_yn                         4
+underlying_conditions_yn         1
+
+# Save and export your results to an csv file - Conditions_Contributing_to_COVID-19_Deaths__by_State_and_Age
+# File 5
+# Step 9
+new_cdc_by_agegroup_sex_race_df.to_csv("COVID_MD_new_cdc_by_agegroup_sex_race_df.csv")
+
+
 -----------
 
 
@@ -409,6 +477,129 @@ FROM COVIDDEATHSBYSTATE
 INNER JOIN US_STATES
 ON COVIDDEATHSBYSTATE.STATE=US_STATES.CODE
 GROUP BY COVIDDEATHSBYSTATE.STATE, US_STATES.STATE
+
+
+---------------------------
+
+CREATE TABLE MARYLAND_DATA(
+case_month                      TEXT,
+res_state                       TEXT,
+state_fips_code                 TEXT,
+res_county                      TEXT,
+county_fips_code                TEXT,
+age_group                       TEXT,
+sex                             TEXT,
+race                            TEXT,
+ethnicity                       TEXT, 
+exposure_yn                     TEXT,
+current_status                  TEXT,
+symptom_status                  TEXT,   
+hosp_yn                         TEXT,
+icu_yn                          TEXT,
+death_yn                        TEXT,
+underlying_conditions_yn        TEXT
+	);
+	
+
+SELECT * FROM COVID_CDC_PROJECT4_DATA
+
+
+
+CREATE TABLE COVID_CDC_PROJECT4_DATA(
+CDC_DATA_ID						INTEGER,
+res_state                       TEXT,
+age_group_0_17                  INTEGER,
+age_group_18_49                 INTEGER,
+age_group_50_64                 INTEGER,
+age_group_65PLUS                INTEGER,
+age_group_MISSING               INTEGER,
+sex_MALE                        INTEGER,
+sex_FEMALE                      INTEGER,
+sex_UNKNOWN                     INTEGER,
+race_ASIAN                      INTEGER,
+race_AM_INDIAN_ALASKA_NATIVE    INTEGER,
+race_BLACK                      INTEGER,
+race_MULTIPLE_OTHER             INTEGER,
+race_WHITE                      INTEGER,
+race_MISSING                    INTEGER,
+ethnicity_HISPANIC_LATINO       INTEGER,
+ethnicity_NON_HISPANIC_LATINO   INTEGER,
+ethnicity_MISSING               INTEGER,
+exposure_YES                    INTEGER,
+exposure_NO                    INTEGER,
+exposure_MISSING                INTEGER,
+current_status_LAB_CONFIRMED    INTEGER,
+current_status_PROBABLE         INTEGER,
+current_status_MISSING          INTEGER,
+symptom_status_SYMTOMATIC       INTEGER,   
+symptom_status_ASYMTOMATIC      INTEGER,  
+symptom_status_MISSING          INTEGER,  
+hosp_YES                        INTEGER,
+hosp_NO                         INTEGER,
+hosp_MISSING                    INTEGER,
+icu_YES                         INTEGER,
+icu_NO                          INTEGER,
+icu_MISSING                     INTEGER,
+death_YES                       INTEGER,
+death_NO                        INTEGER,
+death_MISSING                   INTEGER,
+underlying_conditions_YES       INTEGER,
+underlying_conditions_NO        INTEGER,
+underlying_conditions_MISSING   INTEGER
+)
+
+
+
+SELECT * FROM MARYLAND_DATA
+
+
+SELECT DISTINCT RES_STATE,
+(SELECT COUNT(ID_MD) FROM MARYLAND_DATA WHERE AGE_GROUP LIKE '0 - 17 years') age_group_0_17,
+(SELECT COUNT(ID_MD) FROM MARYLAND_DATA WHERE AGE_GROUP LIKE '18 to 49 years') age_group_18_49,
+(SELECT COUNT(ID_MD) FROM MARYLAND_DATA WHERE AGE_GROUP LIKE '50 to 64 years') age_group_50_64,
+(SELECT COUNT(ID_MD) FROM MARYLAND_DATA WHERE AGE_GROUP LIKE '65+ years') age_group_65PLUS,
+(SELECT COUNT(ID_MD) FROM MARYLAND_DATA WHERE AGE_GROUP 
+ NOT IN ('0 - 17 years', '18 to 49 years', '50 to 64 years', '65+ years')) age_group_MISSING,
+(SELECT COUNT(ID_MD) FROM MARYLAND_DATA WHERE SEX LIKE 'Female') sex_FEMALE,
+(SELECT COUNT(ID_MD) FROM MARYLAND_DATA WHERE SEX LIKE 'Male') sex_MALE,
+(SELECT COUNT(ID_MD) FROM MARYLAND_DATA WHERE SEX NOT IN ('Male', 'Female')) SEX_MISSING,
+(SELECT COUNT(ID_MD) FROM MARYLAND_DATA WHERE race LIKE 'White') race_WHITE, 
+(SELECT COUNT(ID_MD) FROM MARYLAND_DATA WHERE race LIKE 'Black') race_BLACK, 
+(SELECT COUNT(ID_MD) FROM MARYLAND_DATA WHERE race LIKE 'Asian') race_ASIAN, 
+(SELECT COUNT(ID_MD) FROM MARYLAND_DATA WHERE race LIKE 'Multiple/Other') race_MULTIPLE_OTHER, 
+(SELECT COUNT(ID_MD) FROM MARYLAND_DATA WHERE race LIKE 'American Indian/Alaska Native') race_AM_INDIAN_ALASKA_NATIVE, 
+(SELECT COUNT(ID_MD) FROM MARYLAND_DATA WHERE race 
+ NOT IN ('White', 'Black', 'Asian', 'Multiple/Other','American Indian/Alaska Native')) race_MISSING,
+(SELECT COUNT(ID_MD) FROM MARYLAND_DATA WHERE ethnicity LIKE 'Hispanic/Latino') ethnicity_HISPANIC_LATINO, 
+(SELECT COUNT(ID_MD) FROM MARYLAND_DATA WHERE ethnicity LIKE 'Non-Hispanic/Latino') NON_HISPANIC_LATINO, 
+(SELECT COUNT(ID_MD) FROM MARYLAND_DATA WHERE ethnicity NOT IN ('Non-Hispanic/Latino', 'Hispanic/Latino')) ethnicity_MISSING, 
+(SELECT COUNT(ID_MD) FROM MARYLAND_DATA WHERE exposure_yn LIKE 'YES') exposure_YES, 
+(SELECT COUNT(ID_MD) FROM MARYLAND_DATA WHERE exposure_yn LIKE 'NO') exposure_NO, 
+(SELECT COUNT(ID_MD) FROM MARYLAND_DATA WHERE exposure_yn NOT IN ('YES','NO')) exposure_MISSING,
+(SELECT COUNT(ID_MD) FROM MARYLAND_DATA WHERE current_status LIKE 'Laboratory-confirmed case') current_status_LAB_CONFIRMED, 
+(SELECT COUNT(ID_MD) FROM MARYLAND_DATA WHERE current_status LIKE 'Probable Case') current_status_PROBABLE, 
+(SELECT COUNT(ID_MD) FROM MARYLAND_DATA WHERE current_status NOT IN ('Laboratory-confirmed case','Probable Case')) current_status_MISSING , 
+(SELECT COUNT(ID_MD) FROM MARYLAND_DATA WHERE symptom_status LIKE 'Symptomatic') symptom_status_SYMTOMATIC,
+(SELECT COUNT(ID_MD) FROM MARYLAND_DATA WHERE symptom_status LIKE 'ASymptomatic') symptom_status_ASYMTOMATIC, 
+(SELECT COUNT(ID_MD) FROM MARYLAND_DATA WHERE symptom_status NOT IN ('Symptomatic','ASymptomatic')) symptom_status_MISSING, 
+(SELECT COUNT(ID_MD) FROM MARYLAND_DATA WHERE hosp_yn LIKE 'YES') hosp_YES, 
+(SELECT COUNT(ID_MD) FROM MARYLAND_DATA WHERE hosp_yn LIKE 'NO') hosp_NO, 
+(SELECT COUNT(ID_MD) FROM MARYLAND_DATA WHERE hosp_yn NOT IN ('YES','NO')) hosp_MISSING,
+(SELECT COUNT(ID_MD) FROM MARYLAND_DATA WHERE icu_yn LIKE 'YES') icu_YES,  
+(SELECT COUNT(ID_MD) FROM MARYLAND_DATA WHERE icu_yn LIKE 'NO') icu_NO, 
+(SELECT COUNT(ID_MD) FROM MARYLAND_DATA WHERE icu_yn NOT IN ('YES','NO')) icu_MISSING, 
+(SELECT COUNT(ID_MD) FROM MARYLAND_DATA WHERE death_yn LIKE 'YES') death_YES, 
+(SELECT COUNT(ID_MD) FROM MARYLAND_DATA WHERE death_yn LIKE 'NO') death_NO,
+(SELECT COUNT(ID_MD) FROM MARYLAND_DATA WHERE death_yn NOT IN ('YES','NO')) death_MISSING,
+(SELECT COUNT(ID_MD) FROM MARYLAND_DATA WHERE underlying_conditions_yn LIKE 'YES') underlying_conditions_YES, 
+(SELECT COUNT(ID_MD) FROM MARYLAND_DATA WHERE underlying_conditions_yn LIKE 'NO') underlying_conditions_NO,
+(SELECT COUNT(ID_MD) FROM MARYLAND_DATA WHERE underlying_conditions_yn NOT IN ('YES','NO')) underlying_conditions_MISSING 
+FROM MARYLAND_DATA ORDER BY 2,1	
+ 
+
+
+SELECT * FROM MARYLAND_DATA
+
 
 --------------------------
 cdc_database_cleaned.csv
