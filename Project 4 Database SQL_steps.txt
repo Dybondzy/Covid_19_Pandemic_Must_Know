@@ -1,0 +1,407 @@
+# Module 20
+
+# Coronavirus Pandemic Playbook
+## Group 4
+	Leggett, Michael
+	Essilfie-Bondzie, DINAH
+	Teamir rezene, Yodit
+	Ellerbe, Kimberly
+	Gross, Jack
+	Watson, David
+
+
+---------------------------------------------
+1.	We input/imported data from the following tables into PGAdmin
+cdc_db_cleaned_part1 (into CDC_INPUTDB_CLEANED),
+cdc_db_cleaned_part2 (into CDC_INPUTDB_CLEANED),
+cdc_db_cleaned_part3 (into CDC_INPUTDB_CLEANED),
+cdc_db_cleaned_part4 (into CDC_INPUTDB_CLEANED),
+household_income_by_state (into ST_INCOME),
+state_factors_from_gallup (into US_POLITICS),
+census_sex_no_covid (into CENSUS_SEX),
+census_age_no_covid (into CENSUS_RACE)	
+
+
+2.	We created the following tables in PGAdmin, from CDC_INPUTDB_CLEANED:
+DATA_AGE_GROUP (We identified the age group options:
+age_group_0_17, age_group_18_49, age_group_50_64, age_group_65PLUS),
+
+US_STATES(We identified the states, dropping DC),
+
+DATA_SEX(We identified the sex options: MALE, FEMALE),
+
+DATA_RACE (We identified the race options:
+Asian, Black, Multiple/Other, White,
+American Indian/Alaska Native,
+Native Hawaiian/Other Pacific Islander)
+
+
+
+3.	Using the table: US_STATES, we created the table: COVID_MARCH2020_DEC2020_PROJECT4, 
+of totals per state, with calculated data from the table:CDC_INPUTDB_CLEANED
+
+
+4.	Using the table: US_STATES, we added all the tables with totals, 
+and created the table: COVID_MARCH2020_DEC2020_TOTALS_PROJECT4
+
+
+5.	We exported our table COVID_MARCH2020_DEC2020_TOTALS_PROJECT4 from PGAdmin to the csv file:
+COVID_MARCH2020_DEC2020_TOTALS_PROJECT4
+
+
+-----------------------------------------
+
+CREATE TABLE CDC_INPUTDB_CLEANED(
+DATA_ID                         INTEGER,
+res_state                       TEXT,
+age_group                       TEXT,
+sex                             TEXT,
+race                            TEXT);
+
+
+CREATE TABLE DATA_AGE_GROUP
+( AGE_GROUP       TEXT);
+
+
+CREATE TABLE DATA_SEX
+( SEX       TEXT);
+
+
+CREATE TABLE DATA_RACE
+( RACE       TEXT);
+
+CREATE TABLE US_STATES
+( STATE           TEXT,
+  ABBREV          TEXT,
+  ST              TEXT);
+
+
+CREATE TABLE ST_INCOME
+( ST           	TEXT,
+  MEDIAN_INCOME         INTEGER);
+
+
+CREATE TABLE US_POLITICS
+( STATE           				TEXT,
+ST						TEXT,
+CENSUS_Population 				INTEGER,
+State_Policy_Prevention_Mandates_Score		INTEGER,
+Trump_approval 					INTEGER,
+Trump_disapproval 				INTEGER,
+People_who_dont_care_about_Trump 		INTEGER,
+Number_Republican_lean 				INTEGER,
+Number_Democrat_lean				INTEGER,
+Number_Neither_Democrat_or_Republican		INTEGER,
+Number_Conservatives				INTEGER,
+Number_Moderates				INTEGER,
+Number_Liberals					INTEGER,
+Number_NO_political_ideology			INTEGER,
+Economic_Confidence_Index			INTEGER,
+Number_very_religious				INTEGER,
+Number_Moderatly_religious			INTEGER,
+Number_Nonreligious				INTEGER,
+PERCENT_Uninsured				INTEGER,
+Number_uninsured				INTEGER,
+Number_Insured					INTEGER,
+Number_Exercise_frequently			INTEGER,
+Number_dont_exercise_frequently			INTEGER,
+Number_eat_produce_frequently			INTEGER,
+Number_dont_eat_produce_frequently		INTEGER,
+Number_feel_recognize_by_community 		INTEGER,
+Number_dont_feel_community_recognition		INTEGER,
+Number_Feel_active_and_productive		INTEGER,
+Number_arent_active_and_productive		INTEGER,
+Number_Worried_about_money			INTEGER,
+Number_NOT_worried_about_money			INTEGER);
+
+
+
+CREATE TABLE NOCOVID_CENSUS_SEX
+( ST           			TEXT,
+Total_SEX_population		INTEGER,
+sex_male_no_covid	        INTEGER,
+sex_female_no_covid		INTEGER);
+
+
+CREATE TABLE COVID_CASES_SEX
+( ST           			TEXT,
+COVID_SEX_MALE      		INTEGER,
+COVID_SEX_FEMALE		INTEGER
+COVID_NO_SEX               	INTEGER);
+
+
+CREATE TABLE NOCOVID_CENSUS_AGE
+( ST           			TEXT,
+Total_AGE_population		INTEGER,
+age_group_0_17_no_covid		INTEGER,
+age_group_18_49_no_covid	INTEGER,
+age_group_50_64_no_covid	INTEGER,
+age_group_65plus_no_covid	INTEGER);
+
+
+CREATE TABLE COVID_CASES_AGE
+( ST           			TEXT,
+COVID_AGE_GOUP_0_17		INTEGER,
+COVID_AGE_GOUP_18_49		INTEGER,
+COVID_AGE_GOUP_50_64		INTEGER,
+COVID_AGE_GOUP_65plus		INTEGER,
+COVID_NO_AGE_GOUP               INTEGER);
+
+
+CREATE TABLE COVID_CASES_RACE
+( ST           			        	TEXT,
+COVID_race_ASIAN                      		INTEGER,
+COVID_race_AMERICAN_INDIAN_ALASKA_NATIVE    	INTEGER,
+COVID_race_BLACK                      		INTEGER,
+COVID_race_MULTIPLE_OTHER             		INTEGER,
+COVID_race_WHITE                      		INTEGER,
+COVID_race_HAWAIIAN_OTHER_PACIFIC		INTEGER,
+COVID_NO_race                      		INTEGER);
+
+
+
+CREATE TABLE AIRPORT_BY_AREA
+( ST           			TEXT,
+TOT_AIRPORTS			INTEGER,
+STATE_LAND_AREA_SQMILE		INTEGER,
+AIRPORT_AREA			INTEGER);
+
+
+
+
+CREATE TABLE COVID_MARCH2020_DEC2020_TOTALS_PROJECT4
+(STATE				TEXT,
+ST           			TEXT,
+COVID_AGE_GOUP_0_17		INTEGER,
+COVID_AGE_GOUP_18_49		INTEGER,
+COVID_AGE_GOUP_50_64		INTEGER,
+COVID_AGE_GOUP_65plus		INTEGER,
+COVID_NO_AGE_GOUP               INTEGER.
+Total_AGE_population		INTEGER,
+age_group_0_17_no_covid		INTEGER,
+age_group_18_49_no_covid	INTEGER,
+age_group_50_64_no_covid	INTEGER,
+age_group_65plus_no_covid	INTEGER,
+COVID_SEX_MALE      		INTEGER,
+COVID_SEX_FEMALE		INTEGER,
+COVID_NO_SEX               	INTEGER,
+Total_SEX_population		INTEGER,
+sex_male_no_covid	        INTEGER,
+sex_female_no_covid		INTEGER,
+COVID_race_ASIAN                      		INTEGER,
+COVID_race_AMERICAN_INDIAN_ALASKA_NATIVE    	INTEGER,
+COVID_race_BLACK                      		INTEGER,
+COVID_race_MULTIPLE_OTHER             		INTEGER,
+COVID_race_WHITE                      		INTEGER,
+COVID_race_HAWAIIAN_OTHER_PACIFIC		INTEGER,
+COVID_NO_race                      		INTEGER,
+MEDIAN_INCOME         				INTEGER,
+CENSUS_Population 				INTEGER,
+State_Policy_Prevention_Mandates_Score		INTEGER,
+Trump_approval 					INTEGER,
+Trump_disapproval 				INTEGER,
+People_who_dont_care_about_Trump 		INTEGER,
+Number_Republican_lean 				INTEGER,
+Number_Democrat_lean				INTEGER,
+Number_Neither_Democrat_or_Republican		INTEGER,
+Number_Conservatives				INTEGER,
+Number_Moderates				INTEGER,
+Number_Liberals					INTEGER,
+Number_NO_political_ideology			INTEGER,
+Economic_Confidence_Index			INTEGER,
+Number_very_religious				INTEGER,
+Number_Moderatly_religious			INTEGER,
+Number_Nonreligious				INTEGER,
+PERCENT_Uninsured				INTEGER,
+Number_uninsured				INTEGER,
+Number_Insured					INTEGER,
+Number_Exercise_frequently			INTEGER,
+Number_dont_exercise_frequently			INTEGER,
+Number_eat_produce_frequently			INTEGER,
+Number_dont_eat_produce_frequently		INTEGER,
+Number_feel_recognize_by_community 		INTEGER,
+Number_dont_feel_community_recognition		INTEGER,
+Number_Feel_active_and_productive		INTEGER,
+Number_arent_active_and_productive		INTEGER,
+Number_Worried_about_money			INTEGER,
+Number_NOT_worried_about_money			INTEGER,
+TOT_AIRPORTS					INTEGER,
+STATE_LAND_AREA_SQMILE				INTEGER,
+AIRPORT_AREA					INTEGER);
+
+
+------
+
+
+
+FOR ERD
+---------
+
+CDC_INPUTDB_CLEANED 
+-
+DATA_ID                         INTEGER,
+res_state TEXT, FK >- COVID_CASES_SEX.ST
+age_group TEXT,
+sex TEXT,
+race TEXT
+
+
+ST_INCOME
+-
+ST TEXT, FK >- COVID_MARCH2020_DEC2020_TOTALS_PROJECT4.ST
+MEDIAN_INCOME       INTEGER
+
+
+US_POLITICS
+-
+STATE               TEXT,
+ST TEXT, FK >- COVID_MARCH2020_DEC2020_TOTALS_PROJECT4.ST
+CENSUS_Population   INTEGER,
+State_Policy_Prevention_Mandates_Score  INTEGER,
+Trump_approval      INTEGER,
+Trump_disapproval   INTEGER,
+People_who_dont_care_about_Trump        INTEGER,
+Number_Republican_lean                  INTEGER,
+Number_Democrat_lean                    INTEGER,
+Number_Neither_Democrat_or_Republican   INTEGER,
+Number_Conservatives                    INTEGER,
+Number_Moderates                        INTEGER,
+Number_Liberals                         INTEGER,
+Number_NO_political_ideology            INTEGER,
+Economic_Confidence_Index               INTEGER,
+Number_very_religious                   INTEGER,
+Number_Moderatly_religious              INTEGER,
+Number_Nonreligious                     INTEGER,
+PERCENT_Uninsured                       INTEGER,
+Number_uninsured                        INTEGER,
+Number_Insured                          INTEGER,
+Number_Exercise_frequently              INTEGER,
+Number_dont_exercise_frequently         INTEGER,
+Number_eat_produce_frequently           INTEGER,
+Number_dont_eat_produce_frequently      INTEGER,
+Number_feel_recognize_by_community      INTEGER,
+Number_dont_feel_community_recognition  INTEGER,
+Number_Feel_active_and_productive       INTEGER,
+Number_arent_active_and_productive      INTEGER,
+Number_Worried_about_money              INTEGER,
+Number_NOT_worried_about_money          INTEGER
+
+
+
+NOCOVID_CENSUS_SEX
+-
+ST TEXT, FK >- COVID_MARCH2020_DEC2020_TOTALS_PROJECT4.ST
+Total_SEX_population        INTEGER,
+sex_male_no_covid           INTEGER,
+sex_female_no_covid         INTEGER);
+
+
+COVID_CASES_SEX
+-
+ST TEXT, FK >- COVID_MARCH2020_DEC2020_TOTALS_PROJECT4.ST
+COVID_SEX_MALE      INTEGER,
+COVID_SEX_FEMALE    INTEGER
+
+
+
+NOCOVID_CENSUS_AGE
+-
+ST TEXT, FK >- COVID_MARCH2020_DEC2020_TOTALS_PROJECT4.ST
+Total_AGE_population        INTEGER,
+age_group_0_17_no_covid     INTEGER,
+age_group_18_49_no_covid    INTEGER,
+age_group_50_64_no_covid    INTEGER,
+age_group_65plus_no_covid   INTEGER
+
+
+COVID_CASES_AGE
+-
+ST TEXT, FK >- CDC_INPUTDB_CLEANED.res_state
+COVID_AGE_GOUP_0_17         INTEGER,
+COVID_AGE_GOUP_18_49        INTEGER,
+COVID_AGE_GOUP_50_64        INTEGER,
+COVID_AGE_GOUP_65plus       INTEGER
+
+
+COVID_CASES_RACE
+-
+ST TEXT, FK >- CDC_INPUTDB_CLEANED.res_state
+COVID_RACE_POP                          INTEGER,
+COVID_race_ASIAN                        INTEGER,
+COVID_race_AMERICAN_INDIAN_ALASKA_NATIVE    INTEGER,
+COVID_race_BLACK                        INTEGER,
+COVID_race_MULTIPLE_OTHER               INTEGER,
+COVID_race_WHITE                        INTEGER,
+COVID_race_HAWAIIAN_OTHER_PACIFIC       INTEGER,
+COVID_NO_race                           INTEGER
+
+
+AIRPORT_BY_AREA
+-
+ST TEXT, FK >- COVID_MARCH2020_DEC2020_TOTALS_PROJECT4.ST
+TOT_AIRPORTS            INTEGER,
+STATE_LAND_AREA_SQMILE  INTEGER,
+AIRPORT_AREA            INTEGER
+
+
+
+
+COVID_MARCH2020_DEC2020_TOTALS_PROJECT4
+-
+STATE                       TEXT,
+ST                          TEXT,
+COVID_AGE_GOUP_0_17         INTEGER,
+COVID_AGE_GOUP_18_49        INTEGER,
+COVID_AGE_GOUP_50_64        INTEGER,
+COVID_AGE_GOUP_65plus       INTEGER,
+Total_AGE_population        INTEGER,
+age_group_0_17_no_covid     INTEGER,
+age_group_18_49_no_covid    INTEGER,
+age_group_50_64_no_covid    INTEGER,
+age_group_65plus_no_covid   INTEGER,
+COVID_SEX_MALE              INTEGER,
+COVID_SEX_FEMALE            INTEGER,
+Total_SEX_population        INTEGER,
+sex_male_no_covid           INTEGER,
+sex_female_no_covid         INTEGER,
+COVID_race_ASIAN            INTEGER,
+COVID_race_AMERICAN_INDIAN_ALASKA_NATIVE    INTEGER,
+COVID_race_BLACK            INTEGER,
+COVID_race_MULTIPLE_OTHER   INTEGER,
+COVID_race_WHITE            INTEGER,
+COVID_race_HAWAIIAN_OTHER_PACIFIC   INTEGER,
+COVID_NO_race               INTEGER,
+MEDIAN_INCOME               INTEGER,
+CENSUS_Population           INTEGER,
+State_Policy_Prevention_Mandates_Score      INTEGER,
+Trump_approval              INTEGER,
+Trump_disapproval           INTEGER,
+People_who_dont_care_about_Trump            INTEGER,
+Number_Republican_lean      INTEGER,
+Number_Democrat_lean        INTEGER,
+Number_Neither_Democrat_or_Republican       INTEGER,
+Number_Conservatives        INTEGER,
+Number_Moderates            INTEGER,
+Number_Liberals             INTEGER,
+Number_NO_political_ideology        INTEGER,
+Economic_Confidence_Index           INTEGER,
+Number_very_religious               INTEGER,
+Number_Moderatly_religious          INTEGER,
+Number_Nonreligious                 INTEGER,
+PERCENT_Uninsured                   INTEGER,
+Number_uninsured                    INTEGER,
+Number_Insured                      INTEGER,
+Number_Exercise_frequently          INTEGER,
+Number_dont_exercise_frequently     INTEGER,
+Number_eat_produce_frequently       INTEGER,
+Number_dont_eat_produce_frequently      INTEGER,
+Number_feel_recognize_by_community      INTEGER,
+Number_dont_feel_community_recognition  INTEGER,
+Number_Feel_active_and_productive       INTEGER,
+Number_arent_active_and_productive      INTEGER,
+Number_Worried_about_money              INTEGER,
+Number_NOT_worried_about_money          INTEGER,
+TOT_AIRPORTS                            INTEGER,
+STATE_LAND_AREA_SQMILE                  INTEGER,
+AIRPORT_AREA                            INTEGER
+
