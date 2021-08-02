@@ -1618,7 +1618,7 @@ User can select marks to see information about a specific data filed. One can al
 
 When you select marks in the view, all other marks are dimmed to draw attention to the selection. The selection is saved with the workbook. Quick data view can also be done by one of the run-on options; hovering your mouse on the charts/marks. 
 
-We have also created a simple HTML file to show the dashboard in a dedicated webpage with another interactive element where users can download the analysis into PDF file. 
+We have also created a simple HTML file to show the dashboard in a dedicated local server with another interactive element where users can download the analysis into PDF file. 
 
 ## Conclusion 
 
@@ -1662,29 +1662,32 @@ We completed 4 runs of our machine learning model. Below is an overview of the d
 
 ### Summary
 
+_Do we recommend rewriting the pandemic playbook?_
+
+Our models showed that race, age, and population density are 3 of the most common factors that led to spread of COVID-19. Therefore, cities are bearing the brunt of the pandemic and will for future ones. Therefore, the playbook needs to have better mitigation plans for cities. States need support and fund cities more robustly. The goal is that large, medium, and small cities will have the funds to create and train a pandemic emergency response team, which will be a part of their larger emergency response team (for natural disasters and terrorist attacks). With this new playbook in hand, cities will be able to respond quicker to potential community spread of airborne illnesses like COVID-19. 
+
+### Revisiting our Initial Questions
+
 While there are lessons to be learned and perfect for our next project on the topic of COVID-19 data, however these four category of factors were the most common in our 4 runs of our model. 
 
 1. Race
 2. Age
-3. Population density
-4. State Mandate Policy
+3. Population Density
+4. State Policy
 
 Let's revisit our questions from the beginning of the project.
 
 ```
 1. Which social, economic, geographical, lifestyle or political factors contributed the most the spread of the disease?
-2. Which category of factor contributed the most the spread of the disease?
+2. Which category of factor contributed the most to the spread of the disease?
 3. Is there a connection between state policy or political leaning (i.e. mask mandate) and the spread of COVID-19 within the state
 4. Do we need to account for the size of the population that didn't have COVID-19 when using a machine learning model?
 ```
 
-* The longer list above answers the first question we asked at the outset of our project. 
-* The shorter list here answers question #2. 
+* The results section above with all the model runs has the complete list. Younger age groups, certain race categories, certain political leanings, and population density
+* Race category contributed most to the spread of COVID-19
 * For question #3, we wanted to find out if a state policy mandate, such as a mask mandate, or political leaning contributed to the spread of COVID-19. Trump disapproval showed up in the top 5 most important factors in run 2 but didn't show up again. State Policy Mandate Score showed up in two model runs, so there is a stronger connection to this score than political leaning. 
 * For question #4, yes we did take into account the size of the population that didn't have COVID-19 so we could replicate the spread of COVID-19. We even created featured engineered data to replicate and account for those individuals in states that didn't have COVID-19. If we hadn't done this, our model would've been even less accurate and because the mode wouldn't have replicated the spread of COVID-19 correctly.
-
-_Do we recommend rewriting the pandemic playbook?_
-The short answer is yes. Given the list of most important factors, we need to update the playbook to prepare our cities better and quicker. Their emergency management systems are more equipped to deal with natural disasters or terrorist attacks rather than a pandemic. Take what happened with New York City's surge in March and April as an example of how we need to act quicker, especially in our most dense cities. Like New York City, cities generally more dense and more diverse racially and given the results from our model, these communities are more prone to the spread of COVID-19. While cities do receive federal funds, they need the most support from the states where they are located. City officials then should use these funds to hire experts to develop mitigation and quicker response plans the spread of airborne illnesses like COVID-19. 
 
 ### Lessons Learned
 
@@ -1696,5 +1699,6 @@ Our aggregated model was a great way to address our question of looking at the s
 
 * **Add vaccine data.** The data we used only accounted for the spread of COVID-19 from March - December 2020. If we picked up from where we left off and looked at all of 2021, we could run our model for the spread of COVID-19 as individuals were getting vaccinated. We would keep mostly the same factors but redefine the state policy prevention mandate score to measure the days between relaxing a mask mandate or recommendation and reinstating it. For example, on July 29, DC announced it will reinstate its mask mandate indoors. We would also need to add new columns for **vaccine** or **no vaccine** and potentially study breakthrough cases of COVID-19 (vaccinated person contracts COVID-19). This is still an evolving and challenging virus. 
 * **Study COVID-19 spread in regions across the world** In our analysis, we found state policy prevention mandate score as the top factor for determining the spread of COVID-19. Would this be similar in states or regions in Mexico or Australia, for example. We would like to explore similar factors in countries with different governemtn COVID-19 responses. Australia had one of the most severe travel restrictions for entering and leaving the country but no intial lockdown or mask mandate or recommendation.  
+
 
 
